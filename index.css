@@ -1,0 +1,498 @@
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.w
+{
+    width: 1226px;
+    margin: 0px auto;
+}
+body{
+    min-width: 1226px;
+    font:14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.topbar a:hover
+{
+    color: white;
+}
+.topbar-wrapper
+{
+    background-color: #333;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+}
+.topbar{
+    width: 1226px;
+    margin: 0 auto;
+}
+.service,.topbar li
+{
+    float: left;
+}
+.shop-car a
+{
+    width: 120px;
+    background-color: #666666;
+    float: left;
+    text-align: center;
+}
+.shop-car li
+{
+    float: left;
+}
+.shop-car:hover a{
+    background-color: #fff;
+    color: orange;
+}
+.login,.shop-car
+{
+    float: right;
+}
+.login
+{
+    margin-right: 16px;
+}
+.topbar a,.topbar li
+{
+    line-height: 40px;
+    color: #b0b0b0;
+}
+.topbar .line
+{
+    background-color: #424242 ;
+    width: 1px;
+    height: 12px;
+    margin: 15px 8px;
+}
+.download
+{
+    position: relative;
+}
+.download .downlist
+{
+    position:absolute;
+    width: 124px;
+    height: 0px;
+    overflow: hidden;
+    background-color: white;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    left: -40px;
+    transition: height 100ms;
+}
+.download .downlist img
+{
+    width: 90px;
+    height: 90px;
+    margin: 17px 17px;
+    margin-bottom: 10px;
+}
+.download .downlist span
+{
+    color: black;
+    font-size: 14px;
+}
+.download::after
+{  
+    content: '';
+    border: 8px red solid;
+    display: none;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    border-top: none;
+    border-color: transparent transparent white transparent;
+}
+.download:hover .downlist,.download:hover::after
+{
+    height: 148px;
+    display: block;
+    z-index: 9999;
+}
+/* 将导航条的外壳设置为相对定位以保证 下拉条相对其定位 */
+.header-wrapper
+{
+    height: 100px;
+    position: relative;
+}
+.header
+{
+    height: 100px;
+}
+.logo{
+    float: left;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    margin-top: 22px;
+    overflow: hidden;
+}
+/* 设置动画效果 */
+.logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0px;
+    background-image: url(//s02.mifile.cn/assets/static/image/logo-mi2.png);
+    background-size: 100% 100%;
+    transition: left 300ms;
+}
+.logo .l2
+{
+    left: -55px;
+}
+.logo:hover .l1
+{
+    left: 55px;
+}
+.logo:hover .l2
+{
+    left: 0;
+}
+
+/*导航条下部*/
+/* 设置导航条轮廓*/
+.nav
+{
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+    margin-left: 58px;
+}
+/* 设置间距 */
+.nav>li>a
+{
+    padding-right: 20px;
+    color: black;
+    display: block;
+}
+/* 浮动 */
+.nav-wrapper,
+.nav>li{
+    float: left;
+}
+.nav>li:not(.allgoods) a:hover
+{
+    color: rgb(255,103,0);
+}
+
+/* 设置下拉框基本样式 */
+.nav-list
+{
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    left: 0px;
+    top: 100px;
+    transition: height 300ms;
+}
+/* 悬浮下拉 */
+.nav li:not(:last-of-type):not(.allgoods):hover ~ .nav-list,
+.nav-list:hover
+{
+    height: 228px;
+    background-color: #fff;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+    z-index: 98;
+}
+/* 右侧搜索框 */
+.search
+{
+    width: 276px;
+    height: 50px;
+    float: right;
+    margin: 25px;
+}
+/* 设置搜索框 */
+.search .search-box
+{
+    box-sizing: border-box;
+    width: 224px;
+    height: 50px;
+    padding: 0px 10px;
+    float: left;
+    font-size: 15px;
+    outline: none;
+    border: rgb(224, 224, 224) 1px solid;
+}
+.search-box:focus,.search-box:focus+.search-bottom
+{
+    border: solid 1px #ff6700;
+}
+/* 设置搜索按键 */
+.search .search-bottom
+{
+    box-sizing: border-box;
+    width: 52px;
+    height: 50px;
+    float: left;
+    color: #616161;
+    font-size: 16px;
+    border: rgb(224, 224, 224) 1px solid;
+    border-left: none;
+    outline: none;
+}
+/* 按键移入 */
+.search-bottom:hover
+{
+    background-color: #ff6700;
+    color: white;
+}
+.allgoods
+{
+    position: relative;
+}
+
+.left-list
+{
+    padding: 20px 0;
+    box-sizing: border-box;
+    color: #333;
+    position: absolute;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9;
+    left: -113px;
+    line-height: 1;
+}
+.left-list a{
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    padding-left: 30px;
+    color: white;
+    display: block;
+}
+.left-list li a i{
+    float: right;
+    margin-right: 30px;
+    line-height: 42px;
+}
+.left-list a:hover
+{
+    background-color: #ff6700;
+}
+.banner
+{
+    position: relative;
+    height: 460px;
+}
+.imglist li
+{
+    position: absolute
+}
+.imglist li img
+{
+    width: 100%;
+    height: 460px;
+}
+.point-list
+{
+    position: absolute;
+    right: 35px;
+    bottom: 22px;
+}
+.point-list li
+{
+    float: left;
+}
+.point-list a
+{
+    display: block;
+    background-color: rgba(0, 0, 0, .4);
+    border: 3px rgba(255, 255, 255, .4) solid;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+.point-list a:hover,
+.point-list .active a
+{
+    background-color: rgba(255, 255, 255, .4);
+    border-color: rgba(0, 0, 0, .4);
+}
+.next-right
+{
+    background-image: url(./icon-slides.png);
+    width: 40px;
+    height: 70px;
+    position:  absolute;
+    right: 0px;
+    top: 194px;
+    background-position: -124.5px;
+}
+.next-left
+{
+    background-image: url(./icon-slides.png);
+    width: 40px;
+    height: 70px;
+    position:absolute;
+    background-position: -83px;
+    left: 234px;
+    top: 194px;
+}
+.next-left:hover
+{
+    background-position: 0px;
+}
+.next-right:hover
+{
+    background-position: -41.5px;
+}
+/* 悬浮窗框架 */
+.to-top
+{
+    width: 26px;
+    height: 206px;
+    position: fixed;
+    bottom: 100px;
+    right: 50%;
+    margin-right: -639px;
+}
+.to-top li a
+{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    display: block;
+    position: relative;
+}
+.to-top li a:hover i
+{
+    color: #ff6700;
+}
+/* 设置悬浮窗中的样式 */
+.box-wrapper
+{
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    left: -70px;
+    bottom: 5px;
+    display: none;
+}
+.float-box
+{
+    width: 60px;
+    height: 20px;
+    background-color: white;
+    float: left;
+    font-size: 5px;
+    padding-left: 3px;
+    line-height: 20px;
+}
+.three
+{
+    height: 0px;
+    width: 0px;
+    border: white 5px solid;
+    border-color: transparent white transparent ;
+    border-right: none;
+    float: left;
+    margin-top: 5px;
+}
+.to-top li a:hover>.box-wrapper
+{
+    display: block;
+}
+.to-top li a .box-wrapper:hover
+{
+    display: none;
+}
+/* 广告页面 */
+.ad-wrapper{
+    height: 170px;
+    margin-top: 10px;
+}
+.ad-list
+{
+    box-sizing: border-box;
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    float: left;
+    padding-top: 2px;
+    padding-left: 6px;
+}
+
+.ad-list li a
+{
+    display: block;
+    color: #cfccca;
+    height: 84px;
+    width: 76px;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.ad-list li a i
+{
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+.ad-list li a:hover
+{
+    color: white;
+}
+.ad-list li a::before
+{
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+.ad-list li a::after
+{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    background-color: #665e57;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+}
+/* 图片区域 */
+.ad-img{
+    float: left;
+    margin-left: 14px;
+}
+.ad-img li:not(:last-of-type)
+{
+    margin-right: 15px;
+}
+.ad-img li
+{
+    float: left;
+}
+.ad-img li img
+{
+    width: 316px;
+    height: 170px;
+}
